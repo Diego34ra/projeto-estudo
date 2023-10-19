@@ -32,6 +32,11 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
@@ -48,6 +53,18 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.2.0</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>me.dio.ProjetoEstudoApplication</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
